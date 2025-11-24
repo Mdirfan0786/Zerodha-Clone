@@ -5,5 +5,9 @@ import { Doughnut } from "react-chartjs-2";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export function DoughnutChart({ data }) {
+  if (!data || !data.datasets || data.datasets.length === 0) {
+    return <p className="text-center text-muted">No chart data available</p>;
+  }
+
   return <Doughnut data={data} />;
 }

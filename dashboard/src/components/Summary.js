@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Summary = () => {
+  const [data, setData] = useState({
+    marginAvailable: 0,
+    marginUsed: 0,
+    openingBalance: 0,
+    holdingsCount: 0,
+    pnl: 0,
+    pnlPercent: 0,
+    currentValue: 0,
+    investment: 0,
+  });
+
+  useEffect(() => {
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+    axios.get(`${API_URL}/summary`).then((res) => setData(res.data));
+  }, []);
+
   return (
     <>
       <div className="username">
@@ -15,17 +32,17 @@ const Summary = () => {
 
         <div className="data">
           <div className="first">
-            <h3>3.74k</h3>
+            <h3>{data.marginAvailable}</h3>
             <p>Margin available</p>
           </div>
           <hr />
 
           <div className="second">
             <p>
-              Margins used <span>0</span>{" "}
+              Margins used <span>{data.marginUsed}</span>
             </p>
             <p>
-              Opening balance <span>3.74k</span>{" "}
+              Opening balance <span>{data.openingBalance}</span>
             </p>
           </div>
         </div>
@@ -34,13 +51,18 @@ const Summary = () => {
 
       <div className="section">
         <span>
-          <p>Holdings (13)</p>
+          <p>Holdings ({data.holdingsCount})</p>
         </span>
 
         <div className="data">
           <div className="first">
-            <h3 className="profit">
-              1.55k <small>+5.20%</small>{" "}
+            <h3 className={data.pnl >= 0 ? "profit" : "loss"}>
+              {data.pnl}{" "}
+              <small>
+                {data.pnlPercent >= 0
+                  ? `+${data.pnlPercent}%`
+                  : `${data.pnlPercent}%`}
+              </small>
             </h3>
             <p>P&L</p>
           </div>
@@ -48,10 +70,10 @@ const Summary = () => {
 
           <div className="second">
             <p>
-              Current Value <span>31.43k</span>{" "}
+              Current Value <span>{data.currentValue}</span>
             </p>
             <p>
-              Investment <span>29.88k</span>{" "}
+              Investment <span>{data.investment}</span>
             </p>
           </div>
         </div>

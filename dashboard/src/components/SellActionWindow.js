@@ -1,33 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import axios from "axios";
-
 import GeneralContext from "./GeneralContex";
-
 import "./SellActionWindow.css";
 
 const SellActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleSellClick = () => {
-    axios.put("http://localhost:8080/sellOrder", {
-      name: uid,
-      qty: stockQuantity,
-      price: stockPrice,
-      mode: "Sell",
-    });
+  const { closeSellWindow } = useContext(GeneralContext);
 
-    GeneralContext.closeSellWindow();
+  const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
+  const handleSellClick = async () => {
+    try {
+      await axios.put(`${API_URL}/sellOrder`, {
+        name: uid,
+        qty: stockQuantity,
+        price: stockPrice,
+        mode: "SELL",
+      });
+
+      closeSellWindow();
+    } catch (error) {
+      console.error("Sell order failed:", error);
+    }
   };
 
   const handleCancelClick = () => {
-    GeneralContext.closeSellWindow();
+    closeSellWindow();
   };
 
   return (
-    <div className="container" id="Buy-window" draggable="true">
+    <div className="container" id="sell-window" draggable="true">
       <div className="regular-order">
         <div className="inputs">
           <fieldset>

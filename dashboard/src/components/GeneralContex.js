@@ -1,50 +1,57 @@
 import React, { useState } from "react";
-
 import BuyActionWindow from "./BuyActionWindow";
 import SellActionWindow from "./SellActionWindow";
 
 const GeneralContext = React.createContext({
   openBuyWindow: (uid) => {},
   closeBuyWindow: () => {},
+  openSellWindow: (uid) => {},
+  closeSellWindow: () => {},
 });
 
 export const GeneralContextProvider = (props) => {
-  const [isBuyWindowOpen, setIsBuyWindowOpen] = useState(false);
-  const [isSellWindowOpen, setIsSellWindowOpen] = useState(false);
-  const [selectedStockUID, setSelectedStockUID] = useState("");
+  const [actionWindow, setActionWindow] = useState({
+    type: null, // "BUY" | "SELL"
+    uid: "",
+  });
 
-  const handleOpenBuyWindow = (uid) => {
-    setIsBuyWindowOpen(true);
-    setSelectedStockUID(uid);
+  const openBuyWindow = (uid) => {
+    setActionWindow({ type: "BUY", uid });
   };
 
-  const handleOpenSellWindow = (uid) => {
-    setIsSellWindowOpen(true);
-    setSelectedStockUID(uid);
+  const openSellWindow = (uid) => {
+    setActionWindow({ type: "SELL", uid });
   };
 
-  const handleCloseBuyWindow = () => {
-    setIsBuyWindowOpen(false);
-    setSelectedStockUID("");
+  const closeBuyWindow = () => {
+    if (actionWindow.type === "BUY") {
+      setActionWindow({ type: null, uid: "" });
+    }
   };
 
-  const handleCloseSellWindow = () => {
-    setIsSellWindowOpen(false);
-    setSelectedStockUID("");
+  const closeSellWindow = () => {
+    if (actionWindow.type === "SELL") {
+      setActionWindow({ type: null, uid: "" });
+    }
   };
 
   return (
     <GeneralContext.Provider
       value={{
-        openBuyWindow: handleOpenBuyWindow,
-        closeBuyWindow: handleCloseBuyWindow,
-        openSellWindow: handleOpenSellWindow,
-        closeSellWindow: handleCloseSellWindow,
+        openBuyWindow,
+        closeBuyWindow,
+        openSellWindow,
+        closeSellWindow,
       }}
     >
       {props.children}
-      {isBuyWindowOpen && <BuyActionWindow uid={selectedStockUID} />}
-      {isSellWindowOpen && <SellActionWindow uid={selectedStockUID} />}
+
+      {actionWindow.type === "BUY" && (
+        <BuyActionWindow uid={actionWindow.uid} />
+      )}
+      {actionWindow.type === "SELL" && (
+        <SellActionWindow uid={actionWindow.uid} />
+      )}
     </GeneralContext.Provider>
   );
 };
