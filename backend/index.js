@@ -19,7 +19,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: ["http://localhost:3000", "http://localhost:3001"],
     credentials: true,
   })
 );
@@ -69,8 +69,10 @@ app.get("/allOders", async (req, res) => {
 
 app.use("/", authRoute);
 
-app.listen(PORT, () => {
-  console.log("App Started!");
-  mongoose.connect(url);
-  console.log("DB Connected!");
-});
+mongoose
+  .connect(url)
+  .then(() => {
+    console.log("DB Connected!");
+    app.listen(PORT, () => console.log("Server Running"));
+  })
+  .catch((err) => console.log(err));
