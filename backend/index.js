@@ -67,7 +67,7 @@ app.put("/sellOrder", async (req, res) => {
   }
 });
 
-app.get("/allOders", async (req, res) => {
+app.get("/allOrders", async (req, res) => {
   let allOders = await OrdersModel.find({});
   res.json(allOders);
 });
