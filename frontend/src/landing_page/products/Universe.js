@@ -3,6 +3,7 @@ import React from "react";
 function Universe() {
   return (
     <div className="container">
+      {/* Heading */}
       <div className="text-center mt-5 p-5">
         <h1 className="mb-4">The Zerodha Universe</h1>
         <p>
@@ -11,89 +12,90 @@ function Universe() {
         </p>
       </div>
 
-      <div className="row">
-        <div className="col-md-4 p-3 text-center">
+      {/* Grid Start */}
+      <div className="row g-4">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/smallcaseLogo.png"
-            alt="Smallcase Logo"
+            alt="Smallcase"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
+          <p className="text-muted">
             Thematic investing platform that helps you invest in diversified
             baskets of stocks on ETFs.
           </p>
         </div>
 
-        <div className="col-md-4 p-3 text-center">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/streakLogo.png"
-            alt="Streak Logo"
+            alt="Streak"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
+          <p className="text-muted">
             Systematic trading platform that allows you to create and backtest
             strategies without coding.
           </p>
         </div>
 
-        <div className="col-md-4 p-3 text-center">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/sensibullLogo.svg"
-            alt="Sensibull Logo"
+            alt="Sensibull"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
-            Options trading platform that lets you create strategies, analyze
-            positions, and examine data points like open interest, FII/DII, and
-            more.
+          <p className="text-muted">
+            Options trading platform to create strategies, analyze positions,
+            and examine market data.
           </p>
         </div>
 
-        <div className="col-md-4 p-3 text-center">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/zerodhaFundhouse.png"
-            alt="Zerodha Fundhouse Logo"
+            alt="Zerodha Fundhouse"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
-            Our asset management venture that is creating simple and transparent
-            index funds to help you save for your goals.
+          <p className="text-muted">
+            Our asset management venture creating simple and transparent index
+            funds.
           </p>
         </div>
 
-        <div className="col-md-4 p-3 text-center">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/goldenpiLogo.png"
-            alt="GoldenPi Logo"
+            alt="GoldenPi"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
-            Investment research platform that offers detailed insights on
-            stocks, sectors, supply chains, and more.
+          <p className="text-muted">
+            Investment research platform offering insights on stocks, sectors,
+            supply chains and more.
           </p>
         </div>
 
-        <div className="col-md-4 p-3 text-center">
+        <div className="col-md-4 text-center">
           <img
             src="media/images/dittoLogo.png"
-            alt="Ditto Logo"
+            alt="Ditto"
             className="img-fluid mb-3"
-            style={{ height: "25%" }}
+            style={{ maxHeight: "80px" }}
           />
-          <p className="text-small text-muted">
-            Personalized advice on life and health insurance. No spam and no
-            mis-selling. Sign up for free.
+          <p className="text-muted">
+            Personalized advice on life and health insurance. No spam, no
+            mis-selling.
           </p>
         </div>
-        <button
-          className="p-2 btn btn-primary fs-5 mb-5"
-          style={{ width: "18%", margin: "0 auto" }}
-        >
+      </div>
+
+      {/* Sign Up Button */}
+      <div className="text-center mt-4 mb-5">
+        <button className="btn btn-primary fs-5 px-4 py-2">
           Sign up for free
         </button>
       </div>

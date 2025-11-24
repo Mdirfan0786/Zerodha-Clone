@@ -30,15 +30,18 @@ function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/signup",
-        {
-          ...inputValue,
-        },
+        `${API_URL}/signup`,
+        { ...inputValue },
         { withCredentials: true }
       );
+
       const { success, message } = data;
+
       if (success) {
         handleSuccess(message);
         setTimeout(() => {
@@ -50,8 +53,8 @@ function Signup() {
     } catch (error) {
       console.log(error);
     }
+
     setInputValue({
-      ...inputValue,
       email: "",
       password: "",
       username: "",

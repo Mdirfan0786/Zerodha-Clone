@@ -1,322 +1,113 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
+  const linkStyle = {
+    textDecoration: "none",
+    color: "#666666",
+  };
+
+  const bottomLinkStyle = {
+    textDecoration: "none",
+    color: "#A4ABAD",
+    marginRight: "1rem",
+  };
+
   return (
     <footer style={{ backgroundColor: "rgb(250, 250, 250)" }}>
       <div className="container border-top mt-5">
+        {/* TOP ROW */}
         <div className="row mt-5">
           <div className="col">
-            <img src="media/images/logo.svg" style={{ width: "50%" }} />
+            <img
+              src="media/images/logo.svg"
+              style={{ width: "50%" }}
+              alt="logo"
+            />
             <p>
               &copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
+
+          {/* COMPANY */}
           <div className="col" style={{ lineHeight: "2" }}>
-            <p>Company</p>
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              About
-            </a>
+            <p className="fw-bold">Company</p>
+            <Link style={linkStyle}>About</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Products
-            </a>
+            <Link style={linkStyle}>Products</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Pricing
-            </a>
+            <Link style={linkStyle}>Pricing</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Referral programme
-            </a>
+            <Link style={linkStyle}>Referral programme</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Careers
-            </a>
+            <Link style={linkStyle}>Careers</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Zerodha.tech
-            </a>
+            <Link style={linkStyle}>Zerodha.tech</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Press & media
-            </a>
+            <Link style={linkStyle}>Press & media</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Zerodha cares (CSR)
-            </a>
+            <Link style={linkStyle}>Zerodha cares (CSR)</Link>
             <br />
           </div>
+
+          {/* SUPPORT */}
           <div className="col" style={{ lineHeight: "2" }}>
-            <p>Support</p>
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Contact
-            </a>
+            <p className="fw-bold">Support</p>
+            <Link style={linkStyle}>Contact</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Support portal
-            </a>
+            <Link style={linkStyle}>Support portal</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Z-Connect blog
-            </a>
+            <Link style={linkStyle}>Z-Connect blog</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              List of charges
-            </a>
+            <Link style={linkStyle}>List of charges</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Downloads & resources
-            </a>
+            <Link style={linkStyle}>Downloads & resources</Link>
             <br />
           </div>
+
+          {/* ACCOUNT */}
           <div className="col" style={{ lineHeight: "2" }}>
-            <p>Account</p>
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Open an account
-            </a>
+            <p className="fw-bold">Account</p>
+            <Link style={linkStyle}>Open an account</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              Fund transfer
-            </a>
+            <Link style={linkStyle}>Fund transfer</Link>
             <br />
-            <a
-              href=""
-              style={{
-                textDecoration: "none",
-                color: "#666666",
-              }}
-            >
-              60 day challenge
-            </a>
+            <Link style={linkStyle}>60 day challenge</Link>
             <br />
           </div>
         </div>
+
+        {/* LONG DISCLAIMERS */}
         <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
           <p>
-            Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.:
-            INZ000031633 CDSL: Depository services through Zerodha Securities
-            Pvt. Ltd. – SEBI Registration no.: IN-DP-100-2015 Commodity Trading
-            through Zerodha Commodities Pvt. Ltd. MCX: 46025 – SEBI Registration
-            no.: INZ000038238 Registered Address: Zerodha Broking Ltd.,
-            #153/154, 4th Cross, Dollars Colony, Opp. Clarence Public School,
-            J.P Nagar 4th Phase, Bengaluru - 560078, Karnataka, India. For any
-            complaints pertaining to securities broking please write to
-            complaints@zerodha.com, for DP related to dp@zerodha.com. Please
-            ensure you carefully read the Risk Disclosure Document as prescribed
-            by SEBI | ICF
+            Zerodha Broking Ltd.: Member of NSE & BSE – SEBI Registration no.:
+            INZ000031633...
           </p>
 
           <p>
             Procedure to file a complaint on SEBI SCORES: Register on SCORES
-            portal. Mandatory details for filing complaints on SCORES: Name,
-            PAN, Address, Mobile Number, E-mail ID. Benefits: Effective
-            Communication, Speedy redressal of the grievances
+            portal...
           </p>
 
-          <p>
-            Investments in securities market are subject to market risks; read
-            all the related documents carefully before investing.
-          </p>
+          <p>Investments in securities market are subject to market risks...</p>
 
           <p>
             "Prevent unauthorised transactions in your account. Update your
-            mobile numbers/email IDs with your stock brokers. Receive
-            information of your transactions directly from Exchange on your
-            mobile/email at the end of the day. Issued in the interest of
-            investors. KYC is one time exercise while dealing in securities
-            markets - once KYC is done through a SEBI registered intermediary
-            (broker, DP, Mutual Fund etc.), you need not undergo the same
-            process again when you approach another intermediary." Dear
-            Investor, if you are subscribing to an IPO, there is no need to
-            issue a cheque. Please write the Bank account number and sign the
-            IPO application form to authorize your bank to make payment in case
-            of allotment. In case of non allotment the funds will remain in your
-            bank account. As a business we don't give stock tips, and have not
-            authorized anyone to trade on behalf of others. If you find anyone
-            claiming to be part of Zerodha and offering such services, please
-            create a ticket here.
+            mobile numbers/email IDs...
           </p>
         </div>
-        <ul className="text-muted">
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            NSE
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            BSE
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            MCX
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            Terms & conditions
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            Policies & procedures
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            Privacy policy
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            Disclosure
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-              marginRight: "1rem",
-            }}
-          >
-            For investor's attention
-          </a>
-          <a
-            className="p-3"
-            style={{
-              textDecoration: "none",
-              color: "#A4ABAD",
-            }}
-          >
-            Investor charter
-          </a>
+
+        {/* BOTTOM LINKS */}
+        <ul className="text-muted p-0 mt-4" style={{ listStyle: "none" }}>
+          <Link style={bottomLinkStyle}>NSE</Link>
+          <Link style={bottomLinkStyle}>BSE</Link>
+          <Link style={bottomLinkStyle}>MCX</Link>
+          <Link style={bottomLinkStyle}>Terms & conditions</Link>
+          <Link style={bottomLinkStyle}>Policies & procedures</Link>
+          <Link style={bottomLinkStyle}>Privacy policy</Link>
+          <Link style={bottomLinkStyle}>Disclosure</Link>
+          <Link style={bottomLinkStyle}>For investor's attention</Link>
+          <Link style={bottomLinkStyle}>Investor charter</Link>
         </ul>
       </div>
     </footer>

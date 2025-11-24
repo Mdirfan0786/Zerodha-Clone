@@ -7,9 +7,11 @@ function CreateTicket() {
         <h1 className="fs-2 text-muted">
           To create a ticket, select a relevant topic
         </h1>
+
+        {/* Column 1 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-solid fa-circle-plus"></i> Account Opening
+            <i className="fa-solid fa-circle-plus"></i> Account Opening
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             Resident individual
@@ -32,9 +34,10 @@ function CreateTicket() {
           </a>
         </div>
 
+        {/* Column 2 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-solid fa-user"></i> Your Zerodha Account
+            <i className="fa-solid fa-user"></i> Your Zerodha Account
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             Your Profile
@@ -45,7 +48,7 @@ function CreateTicket() {
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Client Master Report (CMR) and Depository Participant (DP)
+            Client Master Report (CMR)
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
@@ -53,13 +56,14 @@ function CreateTicket() {
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Transfer and conversion of securities
+            Transfer & conversion
           </a>
         </div>
 
+        {/* Column 3 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-solid fa-chart-simple"></i> Kite
+            <i className="fa-solid fa-chart-simple"></i> Kite
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             IPO
@@ -70,24 +74,26 @@ function CreateTicket() {
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Margin Trading Facility (MTF) and Margins
+            MTF & Margins
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Charts and orders
+            Charts & orders
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Alerts and Nudges
+            Alerts & Nudges
           </a>
+          <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             General
           </a>
         </div>
 
+        {/* Column 4 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-regular fa-credit-card"></i> Funds
+            <i className="fa-regular fa-credit-card"></i> Funds
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             Add money
@@ -106,9 +112,10 @@ function CreateTicket() {
           </a>
         </div>
 
+        {/* Column 5 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-solid fa-chart-pie"></i> Console
+            <i className="fa-solid fa-chart-pie"></i> Console
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             Portfolio
@@ -135,24 +142,25 @@ function CreateTicket() {
           </a>
         </div>
 
+        {/* Column 6 */}
         <div className="col-4 p-5 mt-2 mb-2">
           <h4 className="text-muted mb-3">
-            <i class="fa-solid fa-circle-notch"></i> Coin
+            <i className="fa-solid fa-circle-notch"></i> Coin
           </h4>
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             Mutual funds
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            National Pension Scheme (NPS)
+            NPS
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Features on Coin
+            Features
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Payments and Orders
+            Payments & Orders
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>

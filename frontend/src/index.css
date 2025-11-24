@@ -68,3 +68,12 @@ code {
   font-size: 1.2rem;
   text-align: left !important;
 }
+
+a {
+  color: #387ed1;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #1c5aa6;
+}

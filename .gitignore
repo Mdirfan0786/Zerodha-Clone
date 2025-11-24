@@ -4,3 +4,4 @@ dashboard/node_modules
 
 # misc
 backend/.env
+frontend/.env

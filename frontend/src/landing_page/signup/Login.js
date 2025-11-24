@@ -29,20 +29,26 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const API_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
     try {
       const { data } = await axios.post(
-        "http://localhost:8080/login",
-        {
-          ...inputValue,
-        },
+        `${API_URL}/login`,
+        { ...inputValue },
         { withCredentials: true }
       );
-      console.log(data);
+
       const { success, message } = data;
+
       if (success) {
         handleSuccess(message);
+
+        const DASHBOARD_URL =
+          process.env.REACT_APP_DASHBOARD_URL || "http://localhost:3001";
+
         setTimeout(() => {
-          window.location.href = "http://localhost:3001";
+          window.location.href = DASHBOARD_URL;
         }, 1000);
       } else {
         handleError(message);
@@ -50,11 +56,8 @@ const Login = () => {
     } catch (error) {
       console.log(error);
     }
-    setInputValue({
-      ...inputValue,
-      email: "",
-      password: "",
-    });
+
+    setInputValue({ email: "", password: "" });
   };
 
   return (

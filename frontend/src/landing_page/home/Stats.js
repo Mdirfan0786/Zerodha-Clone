@@ -26,6 +26,7 @@ function Stats() {
             Not just an app, but a whole ecosystem. Our investments in 30+
             fintech startups offer you tailored services specific to your needs.
           </p>
+
           <h3 className="fs-4">Do better with money</h3>
           <p className="text-muted">
             With initiatives like Nudge and Kill Switch, we don't just
@@ -33,14 +34,32 @@ function Stats() {
             money.
           </p>
         </div>
+
         <div className="col-6 p-5">
-          <img src="media/images/ecosystem.png" style={{ width: "90%" }} />
-          <div className="text-center">
-            <a href="" className="mx-5" style={{ textDecoration: "none" }}>
-              Explore our products <i class="fa-solid fa-arrow-right"></i>
+          <img src="/media/images/ecosystem.png" style={{ width: "90%" }} />
+
+          <div className="text-center mt-4">
+            <a
+              href="#"
+              className="mx-5"
+              style={{
+                textDecoration: "none",
+                fontWeight: "500",
+                transition: "color 0.3s",
+              }}
+            >
+              Explore our products <i className="fa-solid fa-arrow-right"></i>
             </a>
-            <a href="" style={{ textDecoration: "none" }}>
-              Try Kite demo <i class="fa-solid fa-arrow-right"></i>
+
+            <a
+              href="#"
+              style={{
+                textDecoration: "none",
+                fontWeight: "500",
+                transition: "color 0.3s",
+              }}
+            >
+              Try Kite demo <i className="fa-solid fa-arrow-right"></i>
             </a>
           </div>
         </div>
