@@ -56,15 +56,15 @@ Live Demo: https://zerodha-clone-frontend-b924.onrender.com
 
 ### 🏠 Home Page
 
-![Home](./screenshots/Home.png)
+![Home](./Screenshots/Home.png)
 
 ### 📊 Trading Dashboard
 
-![Dashboard](./screenshots/Dashboard.png)
+![Dashboard](./Screenshots/Dashboard.png)
 
 ### 📈 Holdings / Portfolio
 
-![Holdings](./screenshots/Holdings.png)
+![Holdings](./Screenshots/Holdings.png)
 
 ---
 
